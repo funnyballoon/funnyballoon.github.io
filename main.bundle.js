@@ -57,7 +57,7 @@ var AppComponent = /** @class */ (function () {
         var _this = this;
         var path = '/mock/mockData.json';
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]().set('Range', 'bytes=0-123').set('Access-Control-Allow-Origin', '*');
-        this.http.get(path, { headers: headers, responseType: "text" }).subscribe(function (data) {
+        this.http.get(path, { headers: headers, responseType: 'text' }).subscribe(function (data) {
             _this.firstPartialText = data;
         });
     };
@@ -65,8 +65,10 @@ var AppComponent = /** @class */ (function () {
         var _this = this;
         var path = '/mock/mockData.json';
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]().set('Range', 'bytes=1-123').set('Access-Control-Allow-Origin', '*');
-        this.http.get(path, { headers: headers, responseType: "text" }).subscribe(function (data) {
+        this.http.get(path, { headers: headers, responseType: 'text' }).subscribe(function (data) {
             _this.secondPartialText = data;
+        }, function (error) {
+            console.log(error);
         });
     };
     AppComponent = __decorate([
