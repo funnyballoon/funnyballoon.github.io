@@ -55,7 +55,7 @@ var AppComponent = /** @class */ (function () {
     }
     AppComponent.prototype.getFirstPartialText = function () {
         var _this = this;
-        var path = '/mock/mockData.json';
+        var path = '/mock/mockData.txt';
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]().set('Range', 'bytes=0-123').set('Access-Control-Allow-Origin', '*');
         this.http.get(path, { headers: headers, responseType: 'text' }).subscribe(function (data) {
             _this.firstPartialText = data;
@@ -63,7 +63,7 @@ var AppComponent = /** @class */ (function () {
     };
     AppComponent.prototype.getSecondPartialText = function () {
         var _this = this;
-        var path = '/mock/mockData.json';
+        var path = '/mock/mockData.txt';
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]().set('Range', 'bytes=1-123').set('Access-Control-Allow-Origin', '*');
         this.http.get(path, { headers: headers, responseType: 'text' }).subscribe(function (data) {
             _this.secondPartialText = data;
